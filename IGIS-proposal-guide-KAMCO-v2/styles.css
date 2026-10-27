@@ -1,0 +1,5 @@
+/* IGIS 제안서 디자인가이드-KAMCO v2 — Claude Design entry point. @import lines only. */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/type.css";
+@import "./tokens/spacing.css";

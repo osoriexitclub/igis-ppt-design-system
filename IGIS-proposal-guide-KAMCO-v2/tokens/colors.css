@@ -1,0 +1,18 @@
+/* Generated from tokens.json by tools/gen_tokens_css.py. Do not edit by hand. */
+:root {
+  --navy: #2D375A; /* IGIS NAVY */
+  --gray: #5A5A5A; /* IGIS GRAY */
+  --blue: #0055A5; /* IGIS BLUE */
+  --sky: #78B9E6; /* IGIS SKY */
+  --black: #000000; /* PURE BLACK */
+  --white: #FFFFFF; /* PURE WHITE */
+  --gray-900: #2E2E2E; /* GRAY 명도 변형 */
+  --gray-500: #8A8A8A; /* GRAY 명도 변형 */
+  --gray-400: #A8A8A8; /* GRAY 명도 변형 */
+  --gray-300: #C9C9C9; /* GRAY 명도 변형 */
+  --gray-200: #E2E2E2; /* GRAY 명도 변형 */
+  --on-navy-72: #C4C7D1; /* 네이비 위 흰색 72% 상당(사전 합성) */
+  --on-navy-60: #ABAFBD; /* 네이비 위 흰색 60% 상당 */
+  --on-navy-55: #A1A5B5; /* 네이비 위 흰색 55% 상당 */
+  --on-navy-45: #93989F; /* 네이비 위 흰색 45% 상당(사전 합성) */
+}

@@ -1,0 +1,9 @@
+{
+  "name": "igis-kamco-pptx-template",
+  "private": true,
+  "description": "Builds the KAMCO proposal PowerPoint template and sample deck from ../../tokens.json",
+  "scripts": {
+    "build": "node build-template.js ../IGIS-KAMCO-sample-deck.pptx && python3 postprocess.py ../IGIS-KAMCO-sample-deck.pptx && node build-template.js ../.layouts.pptx --layouts-only && python3 postprocess.py ../.layouts.pptx --potx ../IGIS-KAMCO-template.potx"
+  },
+  "dependencies": { "pptxgenjs": "4.0.1" }
+}

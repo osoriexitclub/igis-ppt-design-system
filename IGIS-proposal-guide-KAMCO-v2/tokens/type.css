@@ -1,0 +1,19 @@
+/* Generated from tokens.json by tools/gen_tokens_css.py. Do not edit by hand. */
+:root {
+  --font-sans: "Pretendard", "Malgun Gothic", sans-serif;
+  --text-cover-title: 62px;
+  --text-section-title: 52px;
+  --text-kpi-value: 52px;
+  --text-slide-title: 37px;
+  --text-eyebrow: 13px;
+  --text-subhead: 22px;
+  --text-label: 17px;
+  --text-lead: 19px;
+  --text-body: 17px;
+  --text-table: 14px;
+  --text-caption: 12px;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}

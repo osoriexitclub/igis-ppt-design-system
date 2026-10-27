@@ -1,0 +1,21 @@
+/* Generated from tokens.json by tools/gen_tokens_css.py. Do not edit by hand. */
+:root {
+  --margin-x: 58px;
+  --margin-y: 0px;
+  --inset-top: 18px;
+  --inset-bottom: 8px;
+  --header-title-y: 40px;
+  --content-top: 136px;
+  --content-top-compact: 110px;
+  --content-bottom: 680px;
+  --footer-y: 694px;
+  --gutter: 11px;
+  --gap-block: 40px;
+  --gap-panel: 56px;
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --stroke-hair: 0.75pt;
+  --stroke-rule: 1.25pt;
+  --stroke-accent: 2.25pt;
+}

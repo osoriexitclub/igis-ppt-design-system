@@ -1,0 +1,90 @@
+/* ============================================================
+   IGIS KAMCO v2 — body-slide chrome and body components (HTML).
+   Mirrors the PowerPoint body layouts IGIS 04/04b/05/06 (unchanged)
+   and implements the v2 body components BC-01..BC-09
+   (body-components.md). Body slides only: cover / TOC / section /
+   closing are not rendered from this file.
+   Values come from ../styles.css (generated from tokens.json).
+   ============================================================ */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--white); }
+body { font-family: var(--font-sans); color: var(--gray); word-break: keep-all; overflow-wrap: break-word; }
+
+.slide { position: relative; width: 1280px; height: 720px; background: var(--white); overflow: hidden; }
+
+/* ---- Body chrome (= PPT layouts IGIS 04 / 04b / 06) ---- */
+.corner-h { position: absolute; left: 0; top: 0; width: 30px; height: 3px; background: var(--blue); }
+.corner-v { position: absolute; left: 0; top: 0; width: 3px; height: 30px; background: var(--blue); }
+.eyebrow { position: absolute; left: var(--margin-x); top: var(--inset-top); height: 17px; line-height: 17px;
+  font-size: var(--text-eyebrow); font-weight: 600; color: var(--navy); letter-spacing: 0.16em; white-space: nowrap; }
+.title { position: absolute; left: var(--margin-x); top: var(--header-title-y); width: 1164px; height: 50px; margin: 0;
+  line-height: 50px; font-size: 37.33px; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.title .pt { color: var(--blue); }
+.lead { position: absolute; left: var(--margin-x); top: 96px; width: 1060px; height: 28px; line-height: 28px; margin: 0;
+  font-size: var(--text-lead); color: var(--gray); white-space: nowrap; }
+.content { position: absolute; left: var(--margin-x); width: 1164px; }
+.content.compact { top: var(--content-top-compact); height: 570px; }   /* 110–680 */
+.content.with-lead { top: var(--content-top); height: 544px; }         /* 136–680 */
+.footer-left { position: absolute; left: var(--margin-x); top: var(--footer-y); width: 900px; height: 18px; line-height: 18px;
+  font-size: var(--text-caption); color: var(--gray-500); white-space: nowrap; }
+.footer-mark { position: absolute; left: 1120px; top: 696.5px; height: 13px; }
+.footer-sep { position: absolute; left: 1174px; top: var(--footer-y); width: 20px; height: 18px; line-height: 18px;
+  text-align: center; font-size: var(--text-caption); color: var(--gray-400); }
+.footer-page { position: absolute; left: 1194px; top: var(--footer-y); width: 28px; height: 18px; line-height: 18px;
+  text-align: right; font-size: var(--text-caption); color: var(--gray-500); font-variant-numeric: tabular-nums; }
+
+/* ---- Grid helpers (absolute blocks inside .content) ---- */
+.block { position: absolute; }
+
+/* ---- BC-01 도표 머리말 ---- */
+.exh-head { font-size: var(--text-label); line-height: 1.3; color: var(--navy); font-weight: 500; }
+.exh-head .unit { font-weight: 400; color: var(--gray); }
+.exh-head .sub { display: block; font-weight: 400; color: var(--gray); font-size: var(--text-table); }
+
+/* ---- Charts (inline SVG) ---- */
+svg.chart { display: block; overflow: visible; }
+svg.chart text { font-family: var(--font-sans); }
+.c-axis { font-size: 14px; fill: var(--gray); }
+.c-val { font-size: 14px; font-weight: 600; fill: var(--gray-900); font-variant-numeric: tabular-nums; }
+.c-val.em { fill: var(--blue); }
+.c-val.inv { fill: var(--white); }
+.c-delta { font-size: 14px; font-weight: 600; fill: var(--navy); }
+.c-delta.em { fill: var(--blue); }
+.c-delta-ref { font-size: 12px; fill: var(--gray-500); }
+.c-callout { font-size: 14px; fill: var(--gray); }
+.c-series { font-size: 12px; fill: var(--gray-500); }
+
+/* ---- BC-03 보조 지표 행 ---- */
+.aux-row { position: absolute; border-top: 0.75pt solid var(--gray-300); font-size: var(--text-table); }
+.aux-row .name { position: absolute; left: 0; top: 6px; font-weight: 600; color: var(--navy); }
+.aux-row .v { position: absolute; top: 6px; transform: translateX(-50%); color: var(--gray); font-variant-numeric: tabular-nums; }
+.aux-row .v.em { color: var(--blue); font-weight: 600; }
+
+/* ---- BC-04 해석 블록 ---- */
+.insight { font-size: var(--text-body); line-height: 1.35; color: var(--gray); }
+.insight.bottom { display: grid; gap: 0 var(--gap-block); border-top: 0.75pt solid var(--gray-300); padding-top: 12px; }
+.insight.side .item + .item { border-top: 0.75pt solid var(--gray-300); margin-top: 14px; padding-top: 14px; }
+.insight .key { display: block; font-weight: 600; color: var(--navy); }
+.insight .tag { font-weight: 600; color: var(--gray-500); }
+.insight.dense { font-size: 16px; }
+
+/* ---- BC-05 주석·출처 블록 ---- */
+.notes { position: absolute; left: 0; width: 1164px; bottom: 0; font-size: var(--text-caption); line-height: 1.3; color: var(--gray-500); }
+.notes p { margin: 0; }
+.panel-note { font-size: var(--text-caption); line-height: 1.3; color: var(--gray-500); margin: 6px 0 0; }
+
+/* ---- BC-06 데이터 표 / BC-09 교차 비교 표 ---- */
+table.igis { border-collapse: collapse; width: 100%; font-size: var(--text-table); font-variant-numeric: tabular-nums; }
+table.igis { border-top: 1.25pt solid var(--navy); }
+table.igis th { font-weight: 600; color: var(--navy); text-align: right; padding: 5px 8px; border-bottom: 0.75pt solid var(--navy); vertical-align: bottom; line-height: 1.25; }
+table.igis td { padding: 4px 8px; height: 24px; border-bottom: 0.75pt solid var(--gray-300); text-align: right; color: var(--gray); line-height: 1.25; }
+table.igis th.l, table.igis td.l { text-align: left; }
+table.igis td.rh { color: var(--navy); font-weight: 500; text-align: left; }
+table.igis td.em { color: var(--blue); font-weight: 600; }
+table.igis tr.total td { font-weight: 600; color: var(--navy); border-top: 0.75pt solid var(--navy); }
+table.igis th:first-child, table.igis td:first-child { padding-left: 0; }
+table.igis th:last-child, table.igis td:last-child { padding-right: 0; }
+table.igis.cross td.rh, table.igis.cross th.rh { border-right: 0.75pt solid var(--gray-300); }
+table.igis.cross td.all { font-weight: 600; }
+table.igis td.txt { text-align: left; color: var(--gray); }

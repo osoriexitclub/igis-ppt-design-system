@@ -1,0 +1,7 @@
+/* Generated from tokens.json by tools/gen_tokens_css.py. Do not edit by hand. */
+@font-face { font-family: "Pretendard"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/Pretendard-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Pretendard"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fonts/Pretendard-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Pretendard Medium"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fonts/Pretendard-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Pretendard"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/Pretendard-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Pretendard SemiBold"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/Pretendard-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/Pretendard-Bold.ttf") format("truetype"); }
